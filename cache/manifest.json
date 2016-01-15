@@ -1,0 +1,12 @@
+{
+  "name": "web-push",
+  "short_name": "web-push",
+  "icons": [{
+    "src": "https://nokamoto.github.io/WebPush-demo/icon.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }],
+  "start_url": "https://nokamoto.github.io/WebPush-demo/cache/",
+  "display": "standalone",
+  "gcm_sender_id": "856111406477"
+}

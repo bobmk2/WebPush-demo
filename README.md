@@ -12,3 +12,7 @@ https://nokamoto.github.io/WebPush-demo/fetch/
 ## cache
 chrome only
 https://nokamoto.github.io/WebPush-demo/cache/
+
+## data
+firefox only
+https://nokamoto.github.io/WebPush-demo/data/

@@ -81,4 +81,5 @@ function registerNotification(s) {
   var e = sp[sp.length-1];
 
   document.getElementById('gcm').textContent = 'curl --header "Authorization: key=AIzaSyByxlZomCBATsCmlHJMFDUVflBnpUeyOAs" --header Content-Type:"application/json" https://android.googleapis.com/gcm/send -d "{\\"registration_ids\\":[\\"' + e + '\\"]}"';
+  document.getElementById('gcm_payload').textContent = "node simple/server.js 'YOUR_MESSAGE' 'AIzaSyByxlZomCBATsCmlHJMFDUVflBnpUeyOAs' '" + JSON.stringify(subscription) + "'";
 }

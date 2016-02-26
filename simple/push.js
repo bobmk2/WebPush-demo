@@ -1,6 +1,6 @@
 self.addEventListener('push', function(evt) {
   var title = "WebPush-demo/simple";
-  var message = "You receive push event: " + JSON.stringify(evt);
+  var message = JSON.stringify(evt.data.text());
   var icon = "https://nokamoto.github.io/WebPush-demo/icon.png";
   var tag = "";
 

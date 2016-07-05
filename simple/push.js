@@ -1,13 +1,13 @@
 self.addEventListener('push', function(evt) {
-  var title = "WebPush-demo/simple";
-  var message = JSON.stringify(evt.data.text());
-  var icon = "https://nokamoto.github.io/WebPush-demo/icon.png";
-  var tag = "";
+    var title = "WebPush-demo/simple";
+    var message = JSON.stringify(evt.data.text());
+    var icon = "https://nokamoto.github.io/WebPush-demo/icon.png";
+    var tag = "";
 
   evt.waitUntil(self.registration.showNotification(title, {
-    body: message,
-    icon: icon,
-    tag: tag
+      body: message,
+      icon: icon,
+      tag: tag
   }));
 }, false);
 
@@ -29,3 +29,20 @@ self.addEventListener('notificationclick', function(evt) {
     })
   );
 }, false);
+
+self.addEventListener('pushsubscriptionchange', function() {
+    // 何かを実行する。一般的には、XHR や Fetch を通して
+    // サーバに新しいサブスクリプションの詳細を送ることで
+    // 再サブスクライブする。
+    var title = "pushsubscriptionchangeイベントが呼ばれました";
+    console.log(title);
+
+    var message = title;
+    var icon = "https://nokamoto.github.io/WebPush-demo/icon.png";
+    var tag = "";
+    self.registration.showNotification(title, {
+        body: message,
+        icon: icon,
+        tag: tag
+    });
+});
